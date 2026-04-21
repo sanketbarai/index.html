@@ -94,3 +94,13 @@ form, .reviews {
     transform: scale(1.08);
     border: 4px solid orange;
 }
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    align-items: flex-start;
+}
