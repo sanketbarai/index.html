@@ -12,4 +12,8 @@ h1 {
     padding: 20px;
     text-align: center;
 }
-
+.navbar a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+}
