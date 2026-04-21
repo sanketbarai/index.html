@@ -48,3 +48,9 @@ button {
     border: none;
     border-radius: 5px;
 }
+form, .reviews {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
