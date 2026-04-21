@@ -54,3 +54,11 @@ form, .reviews {
     padding: 10px;
     border-radius: 8px;
 }
+.varity {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
