@@ -26,3 +26,13 @@ h1 {
 img {
     border-radius: 80px;
 }
+.image-section img {
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.image-section img:hover {
+    transform: scale(1.1);
+}
+
