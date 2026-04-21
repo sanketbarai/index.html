@@ -104,3 +104,8 @@ form, .reviews {
     border-radius: 8px;
     align-items: flex-start;
 }
+.selector {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
