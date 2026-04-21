@@ -62,3 +62,11 @@ form, .reviews {
     justify-content: center;
     align-items: center;
 }
+.varity img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 80px;
+    transition: 0.3s;
+    cursor: pointer;
+}
