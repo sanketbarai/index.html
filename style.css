@@ -74,3 +74,11 @@ form, .reviews {
     transform: scale(1.08);
     border: 4px solid orange;
 }
+.thumbnails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
