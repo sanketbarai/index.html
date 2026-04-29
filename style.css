@@ -109,3 +109,9 @@ form, .reviews {
     flex-direction: column;
     gap: 5px;
 }
+.options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
