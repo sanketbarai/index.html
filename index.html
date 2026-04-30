@@ -1,16 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Nike Air Max 90</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Sneaker Store</h1>
-    <div class="navbar">
+
+<h1>Sneaker Store</h1>
+
+<div class="navbar">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
 </div>
+
 <section class="Sneaker shoes">
 
     <div class="image-section">
@@ -33,7 +38,7 @@
             <div class="options">
                 <label><input type="radio" name="color" value="Brown" checked> Brown</label>
                 <label><input type="radio" name="color" value="Green"> Green</label>
-                <label><input type="radio" name="color" value="red"> Red</label>
+                <label><input type="radio" name="color" value="Red"> Red</label>
                 <label><input type="radio" name="color" value="Black"> Black</label>
             </div>
         </div>
@@ -62,32 +67,33 @@
             <img src="https://i.pinimg.com/1200x/33/9d/c7/339dc71979bd3aad699fb2ee958d8dea.jpg" width="300" height="300">
         </div>
     </div>
-<div class="product-info">
+
+    <div class="product-info">
         <h1>Nike Air Dunk</h1>
         <div class="price">₹8,000</div>
 
         <div class="selector">
             <label>Color:</label>
             <div class="options">
-                <label><input type="radio" name="color" value="Orange" checked> Orange</label>
-                <label><input type="radio" name="color" value="Yellow"> Yellow</label>
-                <label><input type="radio" name="color" value="Green"> Green</label>
-                <label><input type="radio" name="color" value="Red"> White</label>
+                <label><input type="radio" name="color2" value="Orange" checked> Orange</label>
+                <label><input type="radio" name="color2" value="Yellow"> Yellow</label>
+                <label><input type="radio" name="color2" value="Green"> Green</label>
+                <label><input type="radio" name="color2" value="White"> White</label>
             </div>
         </div>
 
         <div class="selector">
             <label>Size:</label>
             <div class="options">
-                <label><input type="radio" name="size" value="7"> 7</label>
-                <label><input type="radio" name="size" value="8" checked> 8</label>
-                <label><input type="radio" name="size" value="9"> 9</label>
-                <label><input type="radio" name="size" value="10"> 10</label>
-                <label><input type="radio" name="size" value="11"> 11</label>
+                <label><input type="radio" name="size2" value="7"> 7</label>
+                <label><input type="radio" name="size2" value="8" checked> 8</label>
+                <label><input type="radio" name="size2" value="9"> 9</label>
+                <label><input type="radio" name="size2" value="10"> 10</label>
+                <label><input type="radio" name="size2" value="11"> 11</label>
             </div>
         </div>
 
-        <button id="addToCart">Add to Cart</button>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
 </section>
@@ -95,12 +101,12 @@
 <div>
     <h2>Write a Review</h2>
 
-    <form action="#" method="get">
-        <label for="reviewerName">Name:</label><br>
-        <input type="text" id="reviewerName" name="reviewerName" required><br><br>
+    <form>
+        <label>Name:</label><br>
+        <input type="text" id="reviewerName" required><br><br>
 
-        <label for="reviewText">Your Review:</label><br>
-        <textarea id="reviewText" name="reviewText" rows="5" cols="40" required></textarea><br><br>
+        <label>Your Review:</label><br>
+        <textarea id="reviewText" rows="5" cols="40" required></textarea><br><br>
 
         <button type="submit">Submit Review</button>
         <button type="reset">Clear</button>
@@ -111,80 +117,8 @@
     <h2>Customer Reviews</h2>
 </section>
 
-<script>
-
-const cartButtons = document.querySelectorAll("#addToCart");
-
-cartButtons.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-
-        fetch("https://fakestoreapi.com/carts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                userId: 1,
-                date: new Date(),
-                products: [{
-                    productId: index + 1,
-                    quantity: 1
-                }]
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            alert("Product added to cart!");
-            console.log(data);
-        })
-        .catch(err => console.error(err));
-
-    });
-});
-
-
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("reviewerName").value;
-    const review = document.getElementById("reviewText").value;
-
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            username: name,
-            review: review
-        })
-    })
-    .then(res => res.json())
-    .then(data => {
-
-        alert("Review Submitted!");
-
-        const reviewSection = document.querySelector(".reviews");
-
-        const newReview = document.createElement("article");
-        newReview.classList.add("review");
-
-        newReview.innerHTML = `
-            <h3>${name}</h3>
-            <p>"${review}"</p>
-        `;
-
-        reviewSection.appendChild(newReview);
-
-        form.reset();
-    })
-    .catch(err => console.error(err));
-});
-
-</script>
+<!-- JS LINKED HERE -->
+<script src="script.js"></script>
 
 </body>
 </html>
