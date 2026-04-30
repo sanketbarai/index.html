@@ -5,3 +5,14 @@ cartButtons.forEach((btn, index) => {
  fetch("https://fakestoreapi.com/carts", {
       method: "POST",
             headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                  userId: 1,
+                date: new Date(),
+                products: [{
+                    productId: index + 1,
+                    quantity: 1
+                }]
+            })
+        })
