@@ -50,3 +50,14 @@ form.addEventListener("submit", function(e) {
 
         const newReview = document.createElement("article");
         newReview.classList.add("review");
+          newReview.innerHTML = `
+            <h3>${name}</h3>
+            <p>"${review}"</p>
+        `;
+
+        reviewSection.appendChild(newReview);
+
+        form.reset();
+    })
+    .catch(err => console.error(err));
+});
