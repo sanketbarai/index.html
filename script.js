@@ -19,3 +19,15 @@ cartButtons.forEach((btn, index) => {
          .then(res => res.json())
         .then(data => {
             alert("Product added to cart!");
+            console.log(data);
+        })
+        .catch(err => console.error(err));
+    });
+});
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("reviewerName").value;
+    const review = document.getElementById("reviewText").value;
