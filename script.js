@@ -31,3 +31,6 @@ form.addEventListener("submit", function(e) {
 
     const name = document.getElementById("reviewerName").value;
     const review = document.getElementById("reviewText").value;
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
