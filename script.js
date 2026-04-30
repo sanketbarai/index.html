@@ -41,3 +41,12 @@ form.addEventListener("submit", function(e) {
             review: review
         })
     })
+     .then(res => res.json())
+    .then(data => {
+
+        alert("Review Submitted!");
+
+        const reviewSection = document.querySelector(".reviews");
+
+        const newReview = document.createElement("article");
+        newReview.classList.add("review");
