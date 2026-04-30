@@ -16,3 +16,6 @@ cartButtons.forEach((btn, index) => {
                 }]
             })
         })
+         .then(res => res.json())
+        .then(data => {
+            alert("Product added to cart!");
